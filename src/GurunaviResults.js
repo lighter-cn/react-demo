@@ -8,7 +8,7 @@ class GurunaviResults extends React.Component{
   render(){
     return(
       <div className="g-result">
-        <h2>{this.props.name}</h2>
+        <h2><a href={this.props.url}>{this.props.name}</a></h2>
         <p>{this.props.address}</p>
         <p>{this.props.tel}</p>
       </div>

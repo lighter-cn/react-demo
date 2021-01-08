@@ -54,6 +54,7 @@ class Gurunavi extends React.Component{
             <GurunaviResults 
               key={r.id}
               name={r.name}
+              url={r.url}
               address={r.address}
               tel={r.tel}
             />
