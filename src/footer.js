@@ -4,7 +4,7 @@ class Footer extends React.Component{
   render(){
     return(
       <footer>
-        <p>footer</p>
+        <p>ぐるなびAPIを利用した検索機能のテスト</p>
       </footer>
     );
   }

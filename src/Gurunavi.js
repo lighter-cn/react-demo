@@ -6,9 +6,8 @@ class Gurunavi extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      // 取得結果
       hasResult: false,
-      searchId: "",
+      searchWord: "",
       searchResult: {
         name: "",
         address: "",
@@ -17,12 +16,10 @@ class Gurunavi extends React.Component{
     }
   }
 
-  // 検索実行
   get_result(e){
-    // input のデフォルト挙動の削除
     e.preventDefault();
     // APIへのリクエスト
-    const url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=${API_KEY}&id=${this.state.searchId}`;
+    const url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=${API_KEY}&freeword=${this.state.searchWord}`;
     // const url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=${API_KEY}&id=kcrx702`;
     fetch(url)
     .then((res) => {return res.json()})
@@ -31,8 +28,7 @@ class Gurunavi extends React.Component{
       this.set_result(result)
     });
   }
-  
-  // 結果を取得
+
   set_result(result){
     this.setState({
       hasResult: true,
@@ -45,8 +41,8 @@ class Gurunavi extends React.Component{
   }
 
   // 検索ID取得
-  set_searchId(str){
-    this.setState({searchId: str});
+  set_searchWord(str){
+    this.setState({searchWord: str});
   }
 
   render(){
@@ -61,11 +57,11 @@ class Gurunavi extends React.Component{
       );
     }
     return(
-      <div>
+      <div className="sub-content">
         <h1>ぐるなび検索</h1>
         <form>
           <input
-            onChange={(e)=>{this.set_searchId(e.target.value)}}
+            onChange={(e)=>{this.set_searchWord(e.target.value)}}
           /><br />
           <input
             type="submit"

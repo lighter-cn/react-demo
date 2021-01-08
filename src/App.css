@@ -4,16 +4,17 @@ html * {
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
-}
+.App {text-align: center}
 
-header{
-  background-color: #fcbcc9;
-  height: 80px;
-}
-
+header,
 footer{
   background-color: #fcbcc9;
   height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  margin: 40px;
 }
