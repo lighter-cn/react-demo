@@ -18,3 +18,21 @@ footer{
 .main{
   margin: 40px;
 }
+
+.g-results{
+  margin: 20px 0 ;
+}
+.g-result {
+  width: 80%;
+  margin: 0 auto 40px;
+  text-align-last: left;
+}
+.g-result p{
+  line-height: 24px;
+}
+
+.content input {
+  margin: 10px;
+  padding: 0 10px;
+  height: 24px;
+}

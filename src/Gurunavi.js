@@ -1,4 +1,5 @@
 import React from 'react'
+import GurunaviResults from './GurunaviResults';
 
 const API_KEY = process.env.REACT_APP_GURUNAVI_KEY;
 
@@ -8,11 +9,8 @@ class Gurunavi extends React.Component{
     this.state = {
       hasResult: false,
       searchWord: "",
-      searchResult: {
-        name: "",
-        address: "",
-        tel: ""
-      }
+      searchResult: {},
+      isError: false
     }
   }
 
@@ -20,27 +18,28 @@ class Gurunavi extends React.Component{
     e.preventDefault();
     // APIへのリクエスト
     const url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=${API_KEY}&freeword=${this.state.searchWord}`;
-    // const url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=${API_KEY}&id=kcrx702`;
     fetch(url)
     .then((res) => {return res.json()})
     .then((result)=>{
-      console.log(result.rest[0].name);
-      this.set_result(result)
+      if(result.rest.length > 0){
+        this.set_result(result)
+      }else{
+        // エラー処理
+      }
+    })
+    .catch((e)=>{
+      console.log(e.message);
+      this.setState({isError: true});
     });
   }
 
   set_result(result){
     this.setState({
       hasResult: true,
-      searchResult: {
-        name: result.rest[0].name,
-        address: result.rest[0].address,
-        tel: result.rest[0].tel
-      }
+      searchResult: result.rest
     });
   }
 
-  // 検索ID取得
   set_searchWord(str){
     this.setState({searchWord: str});
   }
@@ -48,21 +47,29 @@ class Gurunavi extends React.Component{
   render(){
     let result;
     if(this.state.hasResult){
-      result=(
-        <div>
-          <p>{ this.state.searchResult.name }</p>
-          <p>{ this.state.searchResult.address }</p>
-          <p>{ this.state.searchResult.tel }</p>
+      result = (
+        <div className="g-results">
+          {this.state.searchResult.map((r)=>{
+            return(
+            <GurunaviResults 
+              key={r.id}
+              name={r.name}
+              address={r.address}
+              tel={r.tel}
+            />
+            );
+          })}
         </div>
       );
     }
     return(
-      <div className="sub-content">
+      <div className="content">
         <h1>ぐるなび検索</h1>
         <form>
           <input
+            placeholder="フリーワード入力"
             onChange={(e)=>{this.set_searchWord(e.target.value)}}
-          /><br />
+          />
           <input
             type="submit"
             value="送信"
