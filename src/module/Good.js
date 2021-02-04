@@ -4,16 +4,23 @@ import React from 'react';
 class Good extends React.Component{
   constructor(props){
     super(props);
-    this.state = {count: 0}
+    this.state = {j: []}
   }
 
-  countUp = (e) => {
-    this.setState({count: this.count + 1})
+  componentDidMount(){
+    fetch("http://localhost:3001/mj/v1/formats")
+    .then(res=>res.json())
+    .then(res=>{
+      this.setState({j: res});
+      console.log(this.state.j[0]);
+    });
   }
-  
+
   render(){
     return (
-      <button onClick={this.countUp}>count: {this.state.count}</button>
+      <>
+        <p>hoge</p>
+      </>
     );
   }
 }
