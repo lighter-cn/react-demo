@@ -1,7 +1,8 @@
-import './App.css';
-import Header from './header';
-import Footer from './footer';
-import Gurunavi from './Gurunavi';
+import './css/App.css';
+import Header from './module/header';
+import Footer from './module/footer';
+import Gurunavi from './module/Gurunavi';
+import Timer from './module/timer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <div className="main">
         <Gurunavi />
+        <Timer />
       </div>
       <Footer />
     </div>

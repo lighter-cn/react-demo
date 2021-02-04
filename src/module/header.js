@@ -4,7 +4,8 @@ class Header extends React.Component{
   render(){
     return(
       <header>
-        <h1>レストラン検索</h1>
+        <h1>Project Ninja</h1>
+        <p>おもしろいをつくる</p>
       </header>
     );
   }
