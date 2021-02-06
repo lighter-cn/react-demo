@@ -43,6 +43,11 @@ html * {
   margin-left: 16px;
 }
 
+.header__toggle {
+  margin-top: 16px;
+  text-align: center;
+}
+
 .footer {
   width: 100%;
   margin: 0 auto;

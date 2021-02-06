@@ -85,6 +85,11 @@ html * {
       margin-left: $space_m;
     }
   }
+
+  &__toggle{
+    margin-top: $space_m;
+    text-align: center;
+  }
 }
 
 // footer ///////////////////////////////////////

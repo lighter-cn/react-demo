@@ -1,8 +1,15 @@
 import React from "react";
 import Content from "./Content";
+import Home from "./Home";
 
 
 class Main extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      main: "home"
+    }
+  };
   render (){
     return (
       <main id="main" className="main">
@@ -10,6 +17,7 @@ class Main extends React.Component{
           <h2 className="main__title">main title</h2>
           <p className="main__txt">this is sample text. hello, everyone.</p>
         </div>
+        <Home />
         <div className="contents">
           <Content />
           <Content />
