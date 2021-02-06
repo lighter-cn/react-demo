@@ -49,9 +49,18 @@ html * {
   font-size: 12px;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .main {
-  width: 100%;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +70,10 @@ html * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ff7c7c;
+}
+
+.aside {
   background-color: #d9f456;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,8 @@
 // color
 $main_bg: #053a31;
 $sub_bg: #d5d5d5;
-$demo_bg1: #d9f456;
+$demo_bg1: #ff7c7c;
+$demo_bg2: #d9f456;
 
 $main_font: #fff;
 
@@ -73,9 +74,16 @@ html * {
 }
 
 // main /////////////////////////////////////////
-.main {
-  @include base;
-  @include centering;
+.container{
+  @include spaceAround;
+}
 
+.main {
+  @include centering;
   background-color: $demo_bg1;
+}
+
+// aside ////////////////////////////////////////
+.aside {
+  background-color: $demo_bg2;
 }
