@@ -1,16 +1,52 @@
+// variable /////////////////////////////////////
+// color
 $main_bg: #053a31;
-$sub_bg: #aaa;
+$sub_bg: #d5d5d5;
+$demo_bg1: #d9f456;
+
 $main_font: #fff;
+
+// font-size
 $f_xl: 36px;
 $f_m: 16px;
+$f_s: 12px;
 
-.header{
-  background-color: $main_bg;
-  height: 200px;
+// height
+$h_l: 200px;
+$h_m: 100px;
+$h_s: 50px;
 
+// mixin ////////////////////////////////////////
+@mixin base {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin spaceAround {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+// reset ////////////////////////////////////////
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// header ///////////////////////////////////////
+.header{
+  @include base;
+  @include spaceAround;
+
+  background-color: $main_bg;
+  height: $h_l;
 
   &__title {
     font-size: $f_xl;
@@ -23,10 +59,23 @@ $f_m: 16px;
   }
 }
 
-footer{
-  background-color: #fcbcc9;
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+// footer ///////////////////////////////////////
+.footer{
+  @include base;
+  @include spaceAround;
+
+  background-color: $sub_bg;
+  height: $h_m;
+
+  &__copyright{
+    font-size: $f_s;
+  }
+}
+
+// main /////////////////////////////////////////
+.main {
+  @include base;
+  @include centering;
+
+  background-color: $demo_bg1;
 }

@@ -1,22 +1,13 @@
-import './css/App.css';
 import './css/style.css'
-import Header from './module/header';
-import Footer from './module/footer';
-import Gurunavi from './module/Gurunavi';
-import Timer from './module/timer';
-import Good from './module/Good';
-import Mouse from './module/Mouse';
+import Header from './module/Header';
+import Main from './module/Main';
+import Footer from './module/Footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div className="main">
-        <Gurunavi />
-        <Timer />
-        <Good />
-        <Mouse />
-      </div>
+      <Main />
       <Footer />
     </div>
   );

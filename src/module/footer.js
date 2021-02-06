@@ -3,8 +3,8 @@ import React from 'react';
 class Footer extends React.Component{
   render(){
     return(
-      <footer>
-        <p>ぐるなびAPIを利用した検索機能のテスト</p>
+      <footer id="footer" className="footer">
+        <p className="footer__copyright">(c)Lighter</p>
       </footer>
     );
   }
