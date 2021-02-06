@@ -1,0 +1,32 @@
+$main_bg: #053a31;
+$sub_bg: #aaa;
+$main_font: #fff;
+$f_xl: 36px;
+$f_m: 16px;
+
+.header{
+  background-color: $main_bg;
+  height: 200px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__title {
+    font-size: $f_xl;
+    color: $main_font;
+  }
+
+  &__txt {
+    font-size: $f_m;
+    color: $main_font;
+  }
+}
+
+footer{
+  background-color: #fcbcc9;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
