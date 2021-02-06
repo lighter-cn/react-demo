@@ -21,7 +21,7 @@ html * {
 }
 
 .header__title {
-  font-size: 36px;
+  font-size: 48px;
   color: #fff;
   margin-bottom: 16px;
 }
@@ -62,37 +62,6 @@ html * {
   font-size: 12px;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ff7c7c;
-}
-
-.main__title {
-  font-size: 24px;
-}
-
 .aside {
   width: 200px;
   background-color: #d9f456;
@@ -103,8 +72,46 @@ html * {
 }
 
 .aside__nav-item {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 36px;
   text-align: center;
+  margin: 12px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main {
+  width: calc(100% - 200px);
+  background-color: #ff7c7c;
+  padding: 16px;
+}
+
+.main__title {
+  font-size: 36px;
+}
+
+.contents {
+  margin-bottom: 16px;
+}
+
+.content {
+  margin-bottom: 16px;
+}
+
+.content__title {
+  font-size: 24px;
+}
+
+.content__txt {
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

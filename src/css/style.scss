@@ -8,6 +8,7 @@ $demo_bg2: #d9f456;
 $main_font: #fff;
 
 // font-size
+$f_xxl: 48px;
 $f_xl: 36px;
 $f_l: 24px;
 $f_m: 16px;
@@ -49,7 +50,6 @@ $space_s: $f_s;
 @mixin spaceBetween {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 // reset ////////////////////////////////////////
 html * {
@@ -67,7 +67,7 @@ html * {
   height: $h_l;
 
   &__title {
-    font-size: $f_xl;
+    font-size: $f_xxl;
     color: $main_font;
     margin-bottom: $space_m;
   }
@@ -100,20 +100,6 @@ html * {
   }
 }
 
-// main /////////////////////////////////////////
-.container{
-  @include base;
-  @include spaceBetween;
-}
-
-.main {
-  @include centering;
-  background-color: $demo_bg1;
-  &__title {
-    font-size: $f_l;
-  }
-}
-
 // aside ////////////////////////////////////////
 .aside {
   width: $w_l;
@@ -121,9 +107,40 @@ html * {
   &__nav {
     list-style: none;
     &-item {
-      font-size: $f_m;
+      font-size: $f_l;
       line-height: $f_xl;
       text-align: center;
+      margin: $space_s 0;
     }
+  }
+}
+
+// main /////////////////////////////////////////
+.container{
+  @include base;
+  @include spaceBetween;
+}
+
+.main {
+  width: calc(100% - 200px);
+  background-color: $demo_bg1;
+  padding: $space_m;
+  &__title {
+    font-size: $f_xl;
+  }
+}
+
+// contents /////////////////////////////////////
+.contents {
+  margin-bottom: $space_m;
+}
+
+.content {
+  margin-bottom: $space_m;
+  &__title {
+    font-size: $f_l;
+  }
+  &__txt {
+    font-size: $f_m;
   }
 }
