@@ -4,10 +4,10 @@ const Aside = props => {
   return (
     <aside id="aside" className="aside">
       <ul className="aside__nav">
-        <li className="aside__nav-item">item1</li>
-        <li className="aside__nav-item">item2</li>
-        <li className="aside__nav-item">item3</li>
-        <li className="aside__nav-item">item4</li>
+        <li className="aside__nav-item">home</li>
+        <li className="aside__nav-item">articles</li>
+        <li className="aside__nav-item">tools</li>
+        <li className="aside__nav-item">etc</li>
       </ul>
     </aside>
   );
