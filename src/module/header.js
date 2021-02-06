@@ -1,13 +1,15 @@
 import React from 'react';
-import Menu from "./Menu";
+import HeaderNav from "./HeaderNav";
 
 class Header extends React.Component{
   render(){
     return(
       <header id="header" className="header">
-        <h1 className="header__title">Project Ninja</h1>
-        <p className="header__txt">おもしろいをつくる</p>
-        <Menu />
+        <div className="header__left">
+          <h1 className="header__title">Project Ninja</h1>
+          <p className="header__txt">Fun JavaScript</p>
+        </div>
+        <HeaderNav />
       </header>
     );
   }

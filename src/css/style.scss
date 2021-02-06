@@ -9,6 +9,7 @@ $main_font: #fff;
 
 // font-size
 $f_xl: 36px;
+$f_l: 24px;
 $f_m: 16px;
 $f_s: 12px;
 
@@ -16,6 +17,16 @@ $f_s: 12px;
 $h_l: 200px;
 $h_m: 100px;
 $h_s: 50px;
+
+// width
+$w_l: 200px;
+$w_m: 100px;
+$w_s: 50px;
+
+// space
+$space_l: $f_l;
+$space_m: $f_m;
+$space_s: $f_s;
 
 // mixin ////////////////////////////////////////
 @mixin base {
@@ -32,6 +43,12 @@ $h_s: 50px;
 @mixin spaceAround {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 // reset ////////////////////////////////////////
@@ -52,11 +69,21 @@ html * {
   &__title {
     font-size: $f_xl;
     color: $main_font;
+    margin-bottom: $space_m;
   }
 
   &__txt {
     font-size: $f_m;
     color: $main_font;
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    &-item {
+      color: $main_font;
+      margin-left: $space_m;
+    }
   }
 }
 
@@ -75,15 +102,28 @@ html * {
 
 // main /////////////////////////////////////////
 .container{
-  @include spaceAround;
+  @include base;
+  @include spaceBetween;
 }
 
 .main {
   @include centering;
   background-color: $demo_bg1;
+  &__title {
+    font-size: $f_l;
+  }
 }
 
 // aside ////////////////////////////////////////
 .aside {
+  width: $w_l;
   background-color: $demo_bg2;
+  &__nav {
+    list-style: none;
+    &-item {
+      font-size: $f_m;
+      line-height: $f_xl;
+      text-align: center;
+    }
+  }
 }

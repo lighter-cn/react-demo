@@ -23,11 +23,24 @@ html * {
 .header__title {
   font-size: 36px;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .header__txt {
   font-size: 16px;
   color: #fff;
+}
+
+.header__nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav-item {
+  color: #fff;
+  margin-left: 16px;
 }
 
 .footer {
@@ -50,11 +63,14 @@ html * {
 }
 
 .container {
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -73,7 +89,22 @@ html * {
   background-color: #ff7c7c;
 }
 
+.main__title {
+  font-size: 24px;
+}
+
 .aside {
+  width: 200px;
   background-color: #d9f456;
+}
+
+.aside__nav {
+  list-style: none;
+}
+
+.aside__nav-item {
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
