@@ -1,6 +1,7 @@
 import React from "react";
 import Content from "./Content";
 import Home from "./Home";
+import Articles from "./Articles";
 
 
 class Main extends React.Component{
@@ -18,10 +19,8 @@ class Main extends React.Component{
           <p className="main__txt">this is sample text. hello, everyone.</p>
         </div>
         <Home />
+        <Articles />
         <div className="contents">
-          <Content />
-          <Content />
-          <Content />
           <Content />
           <Content />
           <Content />
