@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Main/Home/Home";
 import Articles from "./Main/Articles/Articles";
 import Tools from "./Main/Tools/Tools";
+import Etc from "./Main/Etc/Etc";
 
 
 const Main = props => {
@@ -13,7 +14,7 @@ const Main = props => {
   }else if(props.mode === 2){
     main_content = <Tools />; 
   }else{
-    main_content = <Articles />; 
+    main_content = <Etc />; 
   }
   return (
     <main id="main" className="main">
