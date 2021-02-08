@@ -99,24 +99,4 @@ html * {
   background-color: #ff7c7c;
   padding: 16px;
 }
-
-.main__title {
-  font-size: 36px;
-}
-
-.contents {
-  margin-bottom: 16px;
-}
-
-.content {
-  margin-bottom: 16px;
-}
-
-.content__title {
-  font-size: 24px;
-}
-
-.content__txt {
-  font-size: 16px;
-}
 /*# sourceMappingURL=style.css.map */

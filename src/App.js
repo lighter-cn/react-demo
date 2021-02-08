@@ -1,17 +1,18 @@
 import './css/style.css';
-import React from "react";
-import Header from './module/Header';
+import React, { useState } from "react";
+import Header from './module/Header/Header';
 import Main from './module/Main';
-import Aside from './module/Aside';
-import Footer from './module/Footer';
+import Aside from './module/Aside/Aside';
+import Footer from './module/Footer/Footer';
 
 function App() {
+  const [mode, setMode] = useState(0);
   return (
     <div className="App">
       <Header />
       <div className="container">
-        <Aside mode="0"/>
-        <Main />
+        <Aside mode={mode} setMode={setMode}/>
+        <Main mode={mode}/>
       </div>
       <Footer />
     </div>

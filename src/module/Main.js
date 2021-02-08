@@ -1,33 +1,25 @@
 import React from "react";
-import Content from "./Content";
-import Home from "./Home";
-import Articles from "./Articles";
+import Home from "./Main/Home/Home";
+import Articles from "./Main/Articles/Articles";
+import Tools from "./Main/Tools/Tools";
 
 
-class Main extends React.Component{
-  constructor(props){
-    super(props);
-
-  };
-  render (){
-    return (
-      <main id="main" className="main">
-        <div className="contents">
-          <h2 className="main__title">main title</h2>
-          <p className="main__txt">this is sample text. hello, everyone.</p>
-        </div>
-        <Home />
-        <Articles />
-        <div className="contents">
-          <Content />
-          <Content />
-          <Content />
-          <Content />
-          <Content />
-        </div>
-      </main>
-    );
+const Main = props => {
+  let main_content;
+  if(props.mode === 0){
+    main_content = <Home />;
+  }else if(props.mode === 1){
+    main_content = <Articles />; 
+  }else if(props.mode === 2){
+    main_content = <Tools />; 
+  }else{
+    main_content = <Articles />; 
   }
+  return (
+    <main id="main" className="main">
+      { main_content }
+    </main>
+  );
 }
 
 export default Main;
