@@ -16,7 +16,7 @@ html * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #053a31;
+  background-color: #3e078a;
   height: 200px;
 }
 
@@ -69,7 +69,7 @@ html * {
 
 .aside {
   width: 200px;
-  background-color: #d9f456;
+  background-color: #000;
 }
 
 .aside__nav {
@@ -78,9 +78,11 @@ html * {
 
 .aside__nav-item {
   font-size: 24px;
+  color: #fff;
   line-height: 36px;
   text-align: center;
   margin: 12px 0;
+  cursor: pointer;
 }
 
 .container {
@@ -96,7 +98,15 @@ html * {
 
 .main {
   width: calc(100% - 200px);
-  background-color: #ff7c7c;
+  background-color: #fff;
   padding: 16px;
+}
+
+.home__title {
+  font-size: 36px;
+}
+
+.home__txt {
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

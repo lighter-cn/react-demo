@@ -1,9 +1,9 @@
 // variable /////////////////////////////////////
 // color
-$main_bg: #053a31;
-$sub_bg: #d5d5d5;
-$demo_bg1: #ff7c7c;
-$demo_bg2: #d9f456;
+$header_bg: #3e078a;
+$footer_bg: #d5d5d5;
+$main_bg: #fff;
+$aside_bg: #000;
 
 $main_font: #fff;
 
@@ -63,7 +63,7 @@ html * {
   @include base;
   @include spaceAround;
 
-  background-color: $main_bg;
+  background-color: $header_bg;
   height: $h_l;
 
   &__title {
@@ -97,7 +97,7 @@ html * {
   @include base;
   @include spaceAround;
 
-  background-color: $sub_bg;
+  background-color: $footer_bg;
   height: $h_m;
 
   &__copyright{
@@ -108,14 +108,16 @@ html * {
 // aside ////////////////////////////////////////
 .aside {
   width: $w_l;
-  background-color: $demo_bg2;
+  background-color: $aside_bg;
   &__nav {
     list-style: none;
     &-item {
       font-size: $f_l;
+      color: $main_font;
       line-height: $f_xl;
       text-align: center;
       margin: $space_s 0;
+      cursor: pointer;
     }
   }
 }
@@ -125,11 +127,21 @@ html * {
   @include base;
   @include spaceBetween;
 }
-
+// main
 .main {
   width: calc(100% - 200px);
-  background-color: $demo_bg1;
+  background-color: $main_bg;
   padding: $space_m;
 }
+// home
+.home {
+  &__title {
+    font-size: $f_xl;
+  }
+  &__txt {
+    font-size: $f_m;
+  }
+}
+
 
 // contents /////////////////////////////////////
