@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <Aside />
+        <Aside mode="0"/>
         <Main />
       </div>
       <Footer />
