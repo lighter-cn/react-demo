@@ -6,6 +6,7 @@ $main_bg: #fff;
 $aside_bg: #000;
 
 $main_font: #fff;
+$sub_font: #edff94;
 
 // font-size
 $f_xxl: 48px;
@@ -83,6 +84,11 @@ html * {
     &-item {
       color: $main_font;
       margin-left: $space_m;
+      padding-bottom: $space_s;
+      &_current {
+        @extend .header__nav-item;
+        border-bottom: 2px solid $main_font;
+      }
     }
   }
 
