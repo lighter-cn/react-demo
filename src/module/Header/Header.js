@@ -10,7 +10,7 @@ const Header = props => {
         <p className="header__txt">Fun JavaScript</p>
       </div>
       <div className="header__right">
-        <HeaderNav />
+        <HeaderNav mode={props.mode} setMode={props.setMode}/>
         <HeaderToggle />
       </div>
     </header>

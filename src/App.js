@@ -9,7 +9,7 @@ function App() {
   const [mode, setMode] = useState(0);
   return (
     <div className="App">
-      <Header />
+      <Header mode={mode} setMode={setMode} />
       <div className="container">
         <Aside mode={mode} setMode={setMode}/>
         <Main mode={mode}/>
