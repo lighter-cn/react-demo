@@ -111,7 +111,7 @@ html * {
   height: 100vh;
   overflow: scroll;
   background-color: #fff;
-  padding: 16px;
+  padding: 24px 36px;
 }
 
 .home__title {
@@ -144,20 +144,37 @@ html * {
 
 .articles__txt {
   font-size: 16px;
+  margin-bottom: 36px;
 }
 
 .articles__index {
-  margin-top: 16px;
   list-style: none;
 }
 
 .articles__index-item {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
 }
 
 .articles__index-title {
   font-size: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.articles__index-tags {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.articles__index-tag {
+  background-color: #3e078a;
+  color: #fff;
+  margin-right: 12px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.articles__index-txt {
+  margin-bottom: 4px;
 }
 
 .articles__index-data {

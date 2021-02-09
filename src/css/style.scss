@@ -14,6 +14,7 @@ $f_xl: 36px;
 $f_l: 24px;
 $f_m: 16px;
 $f_s: 12px;
+$f_xs: 4px;
 
 // height
 $h_l: 200px;
@@ -30,6 +31,7 @@ $space_xl: $f_xl;
 $space_l: $f_l;
 $space_m: $f_m;
 $space_s: $f_s;
+$space_xs: $f_xs;
 
 // mixin ////////////////////////////////////////
 @mixin base {
@@ -145,7 +147,7 @@ html * {
   height: 100vh;
   overflow: scroll;
   background-color: $main_bg;
-  padding: $space_m;
+  padding: $space_l $space_xl;
 }
 // home
 .home {
@@ -179,16 +181,30 @@ html * {
   }
   &__txt {
     font-size: $f_m;
+    margin-bottom: $space_xl;
   }
   &__index {
-    margin-top: $space_m;
     list-style: none;
     &-item {
-      margin-bottom: $space_m;
+      margin-bottom: $space_xl;
     }
     &-title{
       font-size: $f_l;
-      margin-bottom: $space_s;
+      margin-bottom: $space_xs;
+    }
+    &-tags{
+      font-size: $f_s;
+      margin-bottom: $space_xs;
+    }
+    &-tag{
+      background-color: $header_bg;
+      color: $main_font;
+      margin-right: $space_s;
+      padding: $space_xs;
+      border-radius: $space_xs;
+    }
+    &-txt{
+      margin-bottom: $space_xs;
     }
     &-data{
       font-size: $f_s;
