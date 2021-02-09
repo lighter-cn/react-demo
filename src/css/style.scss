@@ -6,7 +6,7 @@ $main_bg: #fff;
 $aside_bg: #000;
 
 $main_font: #fff;
-$sub_font: #edff94;
+$sub_font: #8229ff;
 
 // font-size
 $f_xxl: 48px;
@@ -26,6 +26,7 @@ $w_m: 100px;
 $w_s: 50px;
 
 // space
+$space_xl: $f_xl;
 $space_l: $f_l;
 $space_m: $f_m;
 $space_s: $f_s;
@@ -85,6 +86,7 @@ html * {
       color: $main_font;
       margin-left: $space_m;
       padding-bottom: $space_s;
+      cursor: pointer;
       &_current {
         @extend .header__nav-item;
         border-bottom: 2px solid $main_font;
@@ -124,6 +126,10 @@ html * {
       text-align: center;
       margin: $space_s 0;
       cursor: pointer;
+      &_current {
+        @extend .aside__nav-item;
+        color: $sub_font;
+      }
     }
   }
 }
@@ -136,6 +142,8 @@ html * {
 // main
 .main {
   width: calc(100% - 200px);
+  height: 100vh;
+  overflow: scroll;
   background-color: $main_bg;
   padding: $space_m;
 }
@@ -143,9 +151,48 @@ html * {
 .home {
   &__title {
     font-size: $f_xl;
+    margin-bottom: $space_m;
   }
   &__txt {
     font-size: $f_m;
+  }
+  &__index {
+    margin-top: $space_m;
+    list-style: none;
+  }
+}
+.profile {
+  &__title {
+    font-size: $f_l;
+    margin: $space_l 0 $space_m;
+  }
+  &__txt {
+    font-size: $f_m;
+  }
+}
+
+// articles
+.articles{
+  &__title {
+    font-size: $f_xl;
+    margin-bottom: $space_m;
+  }
+  &__txt {
+    font-size: $f_m;
+  }
+  &__index {
+    margin-top: $space_m;
+    list-style: none;
+    &-item {
+      margin-bottom: $space_m;
+    }
+    &-title{
+      font-size: $f_l;
+      margin-bottom: $space_s;
+    }
+    &-data{
+      font-size: $f_s;
+    }
   }
 }
 

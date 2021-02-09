@@ -42,6 +42,7 @@ html * {
   color: #fff;
   margin-left: 16px;
   padding-bottom: 12px;
+  cursor: pointer;
 }
 
 .header__nav-item_current {
@@ -81,13 +82,17 @@ html * {
   list-style: none;
 }
 
-.aside__nav-item {
+.aside__nav-item, .aside__nav-item_current {
   font-size: 24px;
   color: #fff;
   line-height: 36px;
   text-align: center;
   margin: 12px 0;
   cursor: pointer;
+}
+
+.aside__nav-item_current {
+  color: #8229ff;
 }
 
 .container {
@@ -103,15 +108,59 @@ html * {
 
 .main {
   width: calc(100% - 200px);
+  height: 100vh;
+  overflow: scroll;
   background-color: #fff;
   padding: 16px;
 }
 
 .home__title {
   font-size: 36px;
+  margin-bottom: 16px;
 }
 
 .home__txt {
   font-size: 16px;
+}
+
+.home__index {
+  margin-top: 16px;
+  list-style: none;
+}
+
+.profile__title {
+  font-size: 24px;
+  margin: 24px 0 16px;
+}
+
+.profile__txt {
+  font-size: 16px;
+}
+
+.articles__title {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.articles__txt {
+  font-size: 16px;
+}
+
+.articles__index {
+  margin-top: 16px;
+  list-style: none;
+}
+
+.articles__index-item {
+  margin-bottom: 16px;
+}
+
+.articles__index-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.articles__index-data {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

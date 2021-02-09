@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./Main/Home/Home";
-import Articles from "./Main/Articles/Articles";
-import Tools from "./Main/Tools/Tools";
-import Etc from "./Main/Etc/Etc";
+import Home from "./Home/Home";
+import Articles from "./Articles/Articles";
+import Tools from "./Tools/Tools";
+import Etc from "./Etc/Etc";
 
 
 const Main = props => {
