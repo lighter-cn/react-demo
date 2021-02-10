@@ -22,7 +22,7 @@ const Articles = props => {
                 tags={x.tags} 
                 date={x.date} 
                 id={x.id}
-                key={props.id}
+                key={x.id}
                 setArticleId={setArticleId}
               />
             )})}
