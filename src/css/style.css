@@ -5,6 +5,10 @@ html * {
           box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 .header {
   width: 100%;
   margin: 0 auto;
@@ -18,6 +22,8 @@ html * {
           align-items: center;
   background-color: #3e078a;
   height: 200px;
+  position: fixed;
+  top: 0;
 }
 
 .header__title {
@@ -104,6 +110,7 @@ html * {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 200px;
 }
 
 .main {
@@ -179,5 +186,19 @@ html * {
 
 .articles__index-data {
   font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.articles__index-btn {
+  background-color: #068f82;
+  color: #fff;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.articles__index-btn:hover {
+  background-color: #02574f;
 }
 /*# sourceMappingURL=style.css.map */

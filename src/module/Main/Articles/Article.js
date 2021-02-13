@@ -9,7 +9,7 @@ const Article = props => {
       </p>
       <p className="article__txt">{props.text}</p>
       <p className="article__date">{props.date}</p>
-      <button onClick={()=>{props.setArticleId("")}}>back</button>
+      <button className="article__btn" onClick={()=>{props.setArticleId("")}}>back</button>
     </article>
   );
 }

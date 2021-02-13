@@ -9,7 +9,7 @@ const ArticleIndex = props => {
       </p>
       <p className="articles__index-txt"  key={props.id + "txt"}>{props.subTitle}</p>
       <p className="articles__index-data" key={props.id + "date"}>{props.date}</p>
-      <button onClick={()=>props.setArticleId(props.id)} key={props.id + "btn"}>detail</button>
+      <button className="articles__index-btn" onClick={()=>props.setArticleId(props.id)} key={props.id + "btn"}>detail</button>
     </li>
   );
 }
