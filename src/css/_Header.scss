@@ -20,6 +20,10 @@
     color: $main_font;
   }
 
+  &__right{
+    @include columnCenter;
+  }
+
   &__nav {
     list-style: none;
     display: flex;
@@ -35,10 +39,8 @@
     }
   }
   &__toggle{
-    margin-top: $space_m;
-    text-align: center;
-    &-btn{
-    }
+    margin: $space_m 0 0;
+    width: $space_xl;
   }
 }
 .switch{
@@ -46,7 +48,7 @@
     width: $space_xl;
     height: $space_m;
     border-radius: $space_m;
-    background-color: #c9c7c7;
+    background-color: $main_bg;
     position: relative;
   }
   &__btn{
@@ -60,4 +62,8 @@
       right: 0;
     }
   }
+}
+
+.light {
+  background-color: $footer_bg;
 }

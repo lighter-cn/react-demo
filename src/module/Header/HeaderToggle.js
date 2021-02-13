@@ -4,11 +4,14 @@ const HeaderToggle = props => {
   const [isChecked,setChecked] = useState(true)
 
   useEffect(()=>{
+    const header = document.getElementById("header");
     const s = document.getElementById("switch");
     if(isChecked){
       s.className="switch__btn";
+      header.classList.remove("light");
     }else{
       s.className="switch__btn-off";
+      header.classList.add("light");
     }
   })
 

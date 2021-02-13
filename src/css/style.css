@@ -41,6 +41,16 @@ body {
   color: #fff;
 }
 
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .header__nav {
   list-style: none;
   display: -webkit-box;
@@ -60,15 +70,15 @@ body {
 }
 
 .header__toggle {
-  margin-top: 16px;
-  text-align: center;
+  margin: 16px 0 0;
+  width: 36px;
 }
 
 .switch__base {
   width: 36px;
   height: 16px;
   border-radius: 16px;
-  background-color: #c9c7c7;
+  background-color: #fff;
   position: relative;
 }
 
@@ -82,6 +92,10 @@ body {
 
 .switch__btn-off {
   right: 0;
+}
+
+.light {
+  background-color: #d5d5d5;
 }
 
 .footer {
