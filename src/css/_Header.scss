@@ -34,9 +34,30 @@
       }
     }
   }
-
   &__toggle{
     margin-top: $space_m;
     text-align: center;
+    &-btn{
+    }
+  }
+}
+.switch{
+  &__base{
+    width: $space_xl;
+    height: $space_m;
+    border-radius: $space_m;
+    background-color: #c9c7c7;
+    position: relative;
+  }
+  &__btn{
+    width: $space_m;
+    height: $space_m;
+    border-radius: $space_m;
+    background-color: $color_2;
+    position: absolute;
+    &-off{
+      @extend .switch__btn;
+      right: 0;
+    }
   }
 }

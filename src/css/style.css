@@ -9,6 +9,10 @@ body {
   position: relative;
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   width: 100%;
   margin: 0 auto;
@@ -58,6 +62,26 @@ body {
 .header__toggle {
   margin-top: 16px;
   text-align: center;
+}
+
+.switch__base {
+  width: 36px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #c9c7c7;
+  position: relative;
+}
+
+.switch__btn, .switch__btn-off {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #068f82;
+  position: absolute;
+}
+
+.switch__btn-off {
+  right: 0;
 }
 
 .footer {

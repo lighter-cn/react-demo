@@ -71,6 +71,10 @@ body{
   position: relative;
 }
 
+.hidden {
+  display: none;
+}
+
 // header ///////////////////////////////////////
 @import "Header";
 
