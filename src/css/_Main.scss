@@ -1,0 +1,20 @@
+// main /////////////////////////////////////////
+.container{
+  @include base;
+  @include spaceBetween;
+  margin-top: $h_l;
+}
+// main
+.main {
+  width: calc(100% - 200px);
+  height: 100vh;
+  overflow: scroll;
+  background-color: $main_bg;
+  padding: $space_l $space_xl;
+}
+
+// home
+@import "Home";
+
+// Articles
+@import "Articles";

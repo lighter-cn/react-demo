@@ -1,0 +1,42 @@
+// header ///////////////////////////////////////
+.header{
+  @include base;
+  @include spaceAround;
+
+  background-color: $header_bg;
+  height: $h_l;
+
+  position: fixed;
+  top: 0;
+
+  &__title {
+    font-size: $f_xxl;
+    color: $main_font;
+    margin-bottom: $space_m;
+  }
+
+  &__txt {
+    font-size: $f_m;
+    color: $main_font;
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    &-item {
+      color: $main_font;
+      margin-left: $space_m;
+      padding-bottom: $space_s;
+      cursor: pointer;
+      &_current {
+        @extend .header__nav-item;
+        border-bottom: 2px solid $main_font;
+      }
+    }
+  }
+
+  &__toggle{
+    margin-top: $space_m;
+    text-align: center;
+  }
+}

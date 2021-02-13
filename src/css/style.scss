@@ -72,121 +72,13 @@ body{
 }
 
 // header ///////////////////////////////////////
-.header{
-  @include base;
-  @include spaceAround;
-
-  background-color: $header_bg;
-  height: $h_l;
-
-  position: fixed;
-  top: 0;
-
-  &__title {
-    font-size: $f_xxl;
-    color: $main_font;
-    margin-bottom: $space_m;
-  }
-
-  &__txt {
-    font-size: $f_m;
-    color: $main_font;
-  }
-
-  &__nav {
-    list-style: none;
-    display: flex;
-    &-item {
-      color: $main_font;
-      margin-left: $space_m;
-      padding-bottom: $space_s;
-      cursor: pointer;
-      &_current {
-        @extend .header__nav-item;
-        border-bottom: 2px solid $main_font;
-      }
-    }
-  }
-
-  &__toggle{
-    margin-top: $space_m;
-    text-align: center;
-  }
-}
+@import "Header";
 
 // footer ///////////////////////////////////////
-.footer{
-  @include base;
-  @include spaceAround;
-
-  background-color: $footer_bg;
-  height: $h_m;
-
-  &__copyright{
-    font-size: $f_s;
-  }
-}
+@import "Footer";
 
 // aside ////////////////////////////////////////
-.aside {
-  width: $w_l;
-  background-color: $aside_bg;
-  &__nav {
-    list-style: none;
-    &-item {
-      font-size: $f_l;
-      color: $main_font;
-      line-height: $f_xl;
-      text-align: center;
-      margin: $space_s 0;
-      cursor: pointer;
-      &_current {
-        @extend .aside__nav-item;
-        color: $sub_font;
-      }
-    }
-  }
-}
+@import "Aside";
 
 // main /////////////////////////////////////////
-.container{
-  @include base;
-  @include spaceBetween;
-  margin-top: $h_l;
-}
-// main
-.main {
-  width: calc(100% - 200px);
-  height: 100vh;
-  overflow: scroll;
-  background-color: $main_bg;
-  padding: $space_l $space_xl;
-}
-// home
-.home {
-  &__title {
-    font-size: $f_xl;
-    margin-bottom: $space_m;
-  }
-  &__txt {
-    font-size: $f_m;
-  }
-  &__index {
-    margin-top: $space_m;
-    list-style: none;
-  }
-}
-.profile {
-  &__title {
-    font-size: $f_l;
-    margin: $space_l 0 $space_m;
-  }
-  &__txt {
-    font-size: $f_m;
-  }
-}
-
-// Articles
-@import "Articles";
-
-// contents /////////////////////////////////////
+@import "Main";

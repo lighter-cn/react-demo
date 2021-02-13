@@ -1,0 +1,12 @@
+// footer ///////////////////////////////////////
+.footer{
+  @include base;
+  @include spaceAround;
+
+  background-color: $footer_bg;
+  height: $h_m;
+
+  &__copyright{
+    font-size: $f_s;
+  }
+}
