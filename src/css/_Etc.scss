@@ -1,0 +1,26 @@
+.etc {
+  &__title {
+    font-size: $f_xl;
+    margin-bottom: $space_m;
+  }
+  &__txt {
+    font-size: $f_m;
+  }
+}
+.contact{
+  margin-top: $space_l;
+  &__title{
+    margin-bottom: $space_m;
+    &-form{
+      width: $w_l;
+      margin-left: $space_m;
+    }
+  }
+  &__text{
+    &-form{
+      width: $w_l;
+      height: $h_m;
+      margin-left: $space_m;
+    }
+  }
+}

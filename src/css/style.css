@@ -239,4 +239,32 @@ body {
 .articles__index-btn:hover {
   background-color: #02574f;
 }
+
+.etc__title {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.etc__txt {
+  font-size: 16px;
+}
+
+.contact {
+  margin-top: 24px;
+}
+
+.contact__title {
+  margin-bottom: 16px;
+}
+
+.contact__title-form {
+  width: 200px;
+  margin-left: 16px;
+}
+
+.contact__text-form {
+  width: 200px;
+  height: 100px;
+  margin-left: 16px;
+}
 /*# sourceMappingURL=style.css.map */
