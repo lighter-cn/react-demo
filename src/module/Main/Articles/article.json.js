@@ -25,11 +25,11 @@ const article_json = [
   },
   {
     "id": 3,
-    "title": "demo:Reactのメリット",
-    "subTitle" : "実際にReactを使った感想です。",
-    "text": "モジュール単位で作れるのが素晴らしい。なにより状態の管理が簡単(hook)",
-    "tags": ["JavaScript","React"],
-    "date": "2021/2/9"
+    "title": "demo:Pythonを触った感想",
+    "subTitle" : "Rubyとの比較をしてみての感想",
+    "text": "Rubyと比較してPythonのほうが口語に近く、書きやすさを感じた。一方で、ドキュメントや情報量はまだRubyの方が多いのかなと言う印象。しかし、Pythonが注目を集めており、情報はかなり増えてきているのでデメリットではないとも思う。",
+    "tags": ["Python"],
+    "date": "2021/2/14"
   },
   {
     "id": 4,

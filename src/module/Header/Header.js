@@ -7,7 +7,7 @@ const Header = props => {
     <header id="header" className="header">
       <div className="header__left">
         <h1 className="header__title">Project Ninja</h1>
-        <p className="header__txt">Fun JavaScript</p>
+        <p className="header__txt">Fun JavaScript and Python.</p>
       </div>
       <div className="header__right">
         <HeaderNav mode={props.mode} setMode={props.setMode}/>
