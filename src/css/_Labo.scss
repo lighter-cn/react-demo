@@ -1,0 +1,54 @@
+//labo
+.labo {
+    &__title {
+        font-size: $f_xl;
+        margin-bottom: $space_m;
+    }
+    &__txt {
+        font-size: $f_m;
+        margin-bottom: $space_xl;
+    }
+    &__contents {
+        @include spaceBetween
+    }
+    &__content{
+        width: $w_l;
+        margin: $space_m;
+    }
+    &__sub-title {
+        font-size: $f_m;
+        text-align: center;
+        margin-bottom: $space_m;
+    }
+    .box_wrapper {
+        width: $w_l;
+        height: $h_l;
+        background-color: $footer_bg;
+        @include centering;
+
+        .box1 {
+            width: $w_m;
+            height: $h_m;
+            background-color: $color_1;
+            transition: all 1s 0s ease;
+            &:hover {
+                background-color: $color_2;
+            }
+        }
+
+        .box2 {
+            width: $w_m;
+            height: $h_m;
+            background-color: $color_1;
+            animation: rotation 4s linear 0s infinite normal none running;
+        }
+        @keyframes rotation {
+            0% {
+              transform: rotate(0);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+    }
+}
