@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 
 const Labo1 = () => {
@@ -20,6 +19,24 @@ const Labo1 = () => {
                 </p>
                 <div className="box_wrapper">
                     <div className="box2"></div>
+                </div>
+            </div>
+            <div className="labo__content">
+                <p className="labo__sub-title">
+                    animation3<br />
+                    wave box
+                </p>
+                <div className="box_wrapper">
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
+                    <div className="box3"></div>
                 </div>
             </div>
         </div>

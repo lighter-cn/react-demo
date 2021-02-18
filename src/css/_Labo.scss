@@ -1,4 +1,9 @@
 //labo
+@mixin box {
+    width: $w_m;
+    height: $h_m;
+    background-color: $color_1;
+}
 .labo {
     &__title {
         font-size: $f_xl;
@@ -8,9 +13,7 @@
         font-size: $f_m;
         margin-bottom: $space_xl;
     }
-    &__contents {
-        @include spaceBetween
-    }
+    &__contents {@include spaceBetween}
     &__content{
         width: $w_l;
         margin: $space_m;
@@ -27,9 +30,7 @@
         @include centering;
 
         .box1 {
-            width: $w_m;
-            height: $h_m;
-            background-color: $color_1;
+            @include box;
             transition: all 1s 0s ease;
             &:hover {
                 background-color: $color_2;
@@ -37,9 +38,7 @@
         }
 
         .box2 {
-            width: $w_m;
-            height: $h_m;
-            background-color: $color_1;
+            @include box;
             animation: rotation 4s linear 0s infinite normal none running;
         }
         @keyframes rotation {
@@ -49,6 +48,49 @@
             100% {
               transform: rotate(360deg);
             }
-          }
+        }
+
+        .box3 {
+            width: 10px;
+            height: 10px;
+            background-color: $color_1;
+            transition: all .5s 0s ease;
+            &:hover {
+                height: 100px;
+                background: $color_2;
+            }
+        }
+
+        .box4 {
+            @include box;
+            &__txt{
+                text-align: center;
+                line-height: $h_m;
+                color: $main_font;
+                transition: all 1s 0s ease;
+                &:hover{
+                    font-size: $f_xl;
+                }
+            }
+        }
+
+        .box5 {
+            @include box;
+            animation: move-box 3s linear 0s infinite normal none running;
+            // transform-origin:center right;
+        }
+        @keyframes move-box {
+            0% {
+                transform: rotate3d(0,0,0,0deg);
+                opacity: 1;
+            }
+            50%{
+                opacity: .2;
+            }
+            100%{
+                transform: rotate3d(1,1,1,360deg);
+                opacity: 1;
+            }
+        }
     }
 }
