@@ -1,30 +1,25 @@
 import React, { useState,useEffect } from "react";
 
 const Tool1 = props => {
-  // const [key,setKey] = useState(process.env.REACT_APP_QIITA_KEY);
-  const [title,setTitle] = useState("");
-  const [tags,setTags] = useState("");
-
-  let qiitaArticle = (
-    <div>
-      <p>{title}</p>
-      <p>{tags}</p>
-    </div>
-    );
+  const [articles,setArticles] = useState({title: "foo",text: "bar"});
 
   useEffect(()=>{
-    fetch("https://qiita.com/api/v2/items").then(res=>{
-      return res.json()
-    }).then(res=>{
-      setTitle(res[0].title);
-      setTags(res[0].tags[0].name);
-    })
-  })
+    fetch("https://jsonbox.io/box_aa8304412bb017eaa234").then(res => console.log(res.json()))
+  });
+
   return (
     <section className="tool">
       <h2 className="tool__title">Tool1</h2>
-      <p className="tool__txt">Qiita APIから最新の記事を取得する</p>
-      {qiitaArticle}
+      <p className="tool__txt">jsonの投稿と取得</p>
+      <table>
+        <th>title</th>
+        <th>text</th>
+        <td>{articles.title}</td>
+        <td>{articles.text}</td>
+      </table>
+      <form>
+        <input type="submit" value="push"></input>
+      </form>
     </section>
   );
 }
