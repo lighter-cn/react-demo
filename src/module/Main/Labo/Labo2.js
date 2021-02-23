@@ -23,6 +23,15 @@ const Labo2 = () => {
                     <div className="box5"></div>
                 </div>
             </div>
+            <div className="labo__content">
+                <p className="labo__sub-title">
+                    animation6<br />
+                    box matrix
+                </p>
+                <div className="box_wrapper">
+                    <div className="box6"></div>
+                </div>
+            </div>
         </div>
     );
 }
