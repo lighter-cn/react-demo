@@ -106,5 +106,9 @@
             @include box;
             transform: matrix(.2, 1, 1, .2, 10, -10);
         }
+
+        .box7 {
+            @include box;
+        }
     }
 }

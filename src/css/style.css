@@ -439,6 +439,12 @@ body {
           transform: matrix(0.2, 1, 1, 0.2, 10, -10);
 }
 
+.labo .box_wrapper .box7 {
+  width: 100px;
+  height: 100px;
+  background-color: #3e078a;
+}
+
 .etc__title {
   font-size: 36px;
   margin-bottom: 16px;
