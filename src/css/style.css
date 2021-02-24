@@ -310,14 +310,26 @@ body {
   width: 100px;
   height: 100px;
   background-color: #3e078a;
-  -webkit-animation: rotation 4s linear 0s infinite normal none running;
-          animation: rotation 4s linear 0s infinite normal none running;
+  -webkit-animation: rotation 2s linear 0s infinite normal none running;
+          animation: rotation 2s linear 0s infinite normal none running;
 }
 
 @-webkit-keyframes rotation {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  50% {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+  }
+  75% {
+    -webkit-transform: rotate(200deg);
+            transform: rotate(200deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -329,6 +341,18 @@ body {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  50% {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+  }
+  75% {
+    -webkit-transform: rotate(200deg);
+            transform: rotate(200deg);
   }
   100% {
     -webkit-transform: rotate(360deg);

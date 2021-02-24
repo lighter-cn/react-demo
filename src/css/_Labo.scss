@@ -39,11 +39,20 @@
 
         .box2 {
             @include box;
-            animation: rotation 4s linear 0s infinite normal none running;
+            animation: rotation 2s linear 0s infinite normal none running;
         }
         @keyframes rotation {
             0% {
               transform: rotate(0);
+            }
+            25% {
+                transform: rotate(40deg);
+            }
+            50% {
+                transform: rotate(100deg);
+            }
+            75% {
+                transform: rotate(200deg);
             }
             100% {
               transform: rotate(360deg);
