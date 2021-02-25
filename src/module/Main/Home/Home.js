@@ -11,6 +11,7 @@ const Home = props => {
       <ul className="home__index">
         <li className="home__index-item">articles: ブログ的な何か</li>
         <li className="home__index-item">tools: 自作のツール</li>
+        <li className="home__index-item">labo: cssとかjsの実験とか</li>
         <li className="home__index-item">etc: その他。コンタクトなど</li>
       </ul>
       <div className="profile">
